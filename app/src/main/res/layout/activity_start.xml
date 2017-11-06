@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.aragon.herusantoso.iakday2.StartActivity">
 
+    <!-- Membuat View berupa ImageView-->
     <ImageView
         android:id="@+id/arrowImage"
         android:layout_width="40dp"
@@ -15,6 +16,7 @@
         android:layout_centerVertical="true"
         />
 
+    <!-- Membuat View berupa Edit Text-->
     <EditText
         android:id="@+id/name"
         android:layout_width="match_parent"
