@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.aragon.herusantoso.iakday2.StartActivity">
 
-    <!-- Membuat View berupa ImageView-->
+    <!-- Membuat view berupa ImageView-->
     <ImageView
         android:id="@+id/arrowImage"
         android:layout_width="80dp"

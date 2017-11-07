@@ -24,9 +24,12 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (nameEdit.getText().toString().equals("")){
-                    Toast.makeText(getApplicationContext(), "Maaf, kamu belum memasukan nama kamu ?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),
+                            "Maaf, kamu belum memasukan nama kamu ?",
+                            Toast.LENGTH_SHORT).show();
                 } else {
                     Intent i = new Intent(getApplicationContext(), CartActivity.class);
+                    //kirim data
                     i.putExtra("name", nameEdit.getText().toString());
                     startActivity(i);
                 }

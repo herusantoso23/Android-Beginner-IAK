@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class CartActivity extends AppCompatActivity {
-    TextView txtNama;
+    TextView txtName;
     TextView txtTotal;
     CheckBox chSopBuah;
     CheckBox chJus;
@@ -23,15 +23,16 @@ public class CartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
-        txtNama = (TextView) findViewById(R.id.txt_nama);
+        txtName = (TextView) findViewById(R.id.txt_nama);
         txtTotal = (TextView) findViewById(R.id.txt_total);
         chSopBuah = (CheckBox) findViewById(R.id.ch_sop);
         chJus = (CheckBox) findViewById(R.id.ch_jus);
         btnOrder = (Button) findViewById(R.id.btn_order);
 
+        //variabel untuk menampung data yang diterima
         String nama = getIntent().getStringExtra("name");
 
-        txtNama.setText("Hai " + nama + ", Selamat berbelanja.");
+        txtName.setText("Hai " + nama + ", Selamat berbelanja.");
 
         chSopBuah.setOnClickListener(new View.OnClickListener() {
             @Override

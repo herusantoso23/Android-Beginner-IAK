@@ -8,6 +8,9 @@
     android:layout_margin="20dp"
     tools:context="com.aragon.herusantoso.iakday2.CartActivity">
 
+    <!--Membuat view berupa TextView,
+    view ini nantinya akan menampilkan data yang dikirim dari activity sebelumnya  -->
+
     <TextView
         android:id="@+id/txt_nama"
         android:layout_width="wrap_content"
@@ -22,6 +25,7 @@
         android:layout_height="wrap_content"
         android:text="Minuman"/>
 
+    <!--Membuat 2 buah menu berupa checkbox-->
     <CheckBox
         android:id="@+id/ch_sop"
         android:layout_width="wrap_content"
@@ -44,6 +48,8 @@
         android:text="Total Harga"
         />
 
+    <!--Membuat view berupa TextView,
+    view ini nantinya akan menampilkan jumlah harga dari menu yang dipesa -->
     <TextView
         android:id="@+id/txt_total"
         android:layout_marginLeft="20dp"
@@ -53,6 +59,12 @@
         android:text="0"
         android:textSize="24sp"
         />
+
+    <!--
+    Membuat view berupa button,
+    view ini nantinya akan menampilkan konfirmasi harga total
+    pada saat button tersebut di klik / sentuh
+    -->
 
     <Button
         android:id="@+id/btn_order"
