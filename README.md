@@ -9,25 +9,25 @@
 
 
 <div align="center">
-![Start Acrtivity](https://raw.githubusercontent.com/herusantoso23/source/master/new-project.png)
+![alt text](https://raw.githubusercontent.com/herusantoso23/source/master/new-project.png)
 </div>
 
 3). Pada Target Android Devices, pilih minimun sdk misal API 19: Android 4.4 (Kitkat)
 
 <div align="center">
-![Start Acrtivity](https://raw.githubusercontent.com/herusantoso23/source/master/target.png)
+![alt text](https://raw.githubusercontent.com/herusantoso23/source/master/target.png)
 </div>
 
 4). Pada Add an Activity to Mobile, pilih Empty Layout
 
 <div align="center">
-![Start Acrtivity](https://raw.githubusercontent.com/herusantoso23/source/master/add-activity.png)
+![alt text](https://raw.githubusercontent.com/herusantoso23/source/master/add-activity.png)
 </div>
 
 5). Pada Customize the Activity, rubah nama activity menjadi "StartActivity" dan nama layout menjadi <i>activity_start</i>
 
 <div align="center">
-![Start Acrtivity](https://raw.githubusercontent.com/herusantoso23/source/master/customize.png)
+![alt text](https://raw.githubusercontent.com/herusantoso23/source/master/customize.png)
 </div>
 
 6). Finish
@@ -38,7 +38,7 @@ Pada halaman ini nantinya akan menyediakan sebuah view berupa EditText dan Image
 Berikut adalah tampilannya :
 
 <div align="center">
-![Start Acrtivity](https://raw.githubusercontent.com/herusantoso23/source/master/start.png)
+![alt text](https://raw.githubusercontent.com/herusantoso23/source/master/start.png)
 </div>
 
 Bagaimana cara membuatnya :
@@ -88,7 +88,7 @@ Ketika halaman ini tampil, aplikasi akan menampilkan data yang dikirim dari acti
 Berikut adalah tampilannya :
 
 <div align="center">
-![](https://raw.githubusercontent.com/herusantoso23/source/master/cart.png)
+![alt text](https://raw.githubusercontent.com/herusantoso23/source/master/cart.png)
 </div>
 
 Bagaimana cara membuatnya :
