@@ -9,13 +9,13 @@
 
 
 <div align="center">
-![alt text](https://raw.githubusercontent.com/herusantoso23/source/master/new-project.png)
+![](https://raw.githubusercontent.com/herusantoso23/source/master/new-project.png?raw=true)
 </div>
 
 3). Pada Target Android Devices, pilih minimun sdk misal API 19: Android 4.4 (Kitkat)
 
 <div align="center">
-![alt text](https://raw.githubusercontent.com/herusantoso23/source/master/target.png)
+![](https://raw.githubusercontent.com/herusantoso23/source/master/target.png?raw=true)
 </div>
 
 4). Pada Add an Activity to Mobile, pilih Empty Layout
