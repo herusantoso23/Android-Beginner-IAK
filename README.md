@@ -7,28 +7,29 @@
 
 2). Pada New Project, Lakukan konfigurasi project baru anda seperti Application Name, Company Domain dan Project Location
 
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/herusantoso23/source/master/new-project.png">
+</p>
 
-<div align="center">
-![](https://raw.githubusercontent.com/herusantoso23/source/master/new-project.png?raw=true)
-</div>
 
 3). Pada Target Android Devices, pilih minimun sdk misal API 19: Android 4.4 (Kitkat)
 
-<div align="center">
-![](https://raw.githubusercontent.com/herusantoso23/source/master/target.png?raw=true)
-</div>
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/herusantoso23/source/master/target.png">
+</p>
+
 
 4). Pada Add an Activity to Mobile, pilih Empty Layout
 
-<div align="center">
-![alt text](https://raw.githubusercontent.com/herusantoso23/source/master/add-activity.png)
-</div>
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/herusantoso23/source/master/add-activity.png">
+</p>
 
 5). Pada Customize the Activity, rubah nama activity menjadi "StartActivity" dan nama layout menjadi <i>activity_start</i>
 
-<div align="center">
-![alt text](https://raw.githubusercontent.com/herusantoso23/source/master/customize.png)
-</div>
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/herusantoso23/source/master/customize.png">
+</p>
 
 6). Finish
 
@@ -37,9 +38,9 @@ Pada halaman ini nantinya akan menyediakan sebuah view berupa EditText dan Image
 
 Berikut adalah tampilannya :
 
-<div align="center">
-![alt text](https://raw.githubusercontent.com/herusantoso23/source/master/start.png)
-</div>
+<p align="center">
+  <img width="240" height="500" src="https://raw.githubusercontent.com/herusantoso23/source/master/start.png">
+</p>
 
 Bagaimana cara membuatnya :
 
@@ -87,9 +88,9 @@ Ketika halaman ini tampil, aplikasi akan menampilkan data yang dikirim dari acti
 
 Berikut adalah tampilannya :
 
-<div align="center">
-![alt text](https://raw.githubusercontent.com/herusantoso23/source/master/cart.png)
-</div>
+<p align="center">
+  <img width="240" height="500" src="https://raw.githubusercontent.com/herusantoso23/source/master/cart.png">
+</p>
 
 Bagaimana cara membuatnya :
 
