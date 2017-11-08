@@ -2,13 +2,35 @@
 ## IAK Batch 3 Hari ke 2
 
 
-##### 1. Buat project baru
-1. Pada android studi buatlah sebuah project baru
-2. Pada New Project, Lakukan konfigurasi project baru anda seperti Application Name, Company Domain dan Project Location
-3. Pada Target Android Devices, pilih minimun sdk misal API 19: Android 4.4 (Kitkat)
-4. Pada Add an Activity to Mobile, pilih Empty Layout
-5. Pada Customize the Activity, rubah nama activity menjadi "StartActivity" dan nama layout menjadi <i>activity_start</i>
-6. Finish
+##### 1. Membuat project baru
+1). Pada android studi buatlah sebuah project baru, dengan pilih menu file-new - new project
+
+2). Pada New Project, Lakukan konfigurasi project baru anda seperti Application Name, Company Domain dan Project Location
+
+
+<div align="center">
+![Start Acrtivity](https://raw.githubusercontent.com/herusantoso23/source/master/new-project.png)
+</div>
+
+3). Pada Target Android Devices, pilih minimun sdk misal API 19: Android 4.4 (Kitkat)
+
+<div align="center">
+![Start Acrtivity](https://raw.githubusercontent.com/herusantoso23/source/master/target.png)
+</div>
+
+4). Pada Add an Activity to Mobile, pilih Empty Layout
+
+<div align="center">
+![Start Acrtivity](https://raw.githubusercontent.com/herusantoso23/source/master/add-activity.png)
+</div>
+
+5). Pada Customize the Activity, rubah nama activity menjadi "StartActivity" dan nama layout menjadi <i>activity_start</i>
+
+<div align="center">
+![Start Acrtivity](https://raw.githubusercontent.com/herusantoso23/source/master/customize.png)
+</div>
+
+6). Finish
 
 ##### 2. Merancang tampilan halaman start
 Pada halaman ini nantinya akan menyediakan sebuah view berupa EditText dan ImageView. Jadi nantinya user akan menuliskan nama pada EditText, ketika icon (ImageView) disentuh maka aplikasi akan melakukan proses validasi yaitu jika isian kosong maka akan menampilkan sebuah message berupa Toast tetapi jika sebalikya maka akan berpindah ke activity berikut nya.
@@ -16,7 +38,7 @@ Pada halaman ini nantinya akan menyediakan sebuah view berupa EditText dan Image
 Berikut adalah tampilannya :
 
 <div align="center">
-![Start Acrtivity](https://raw.githubusercontent.com/herusantoso23/AndroidBeginnerIAK/master/app/src/main/res/drawable/start.png)
+![Start Acrtivity](https://raw.githubusercontent.com/herusantoso23/source/master/start.png)
 </div>
 
 Bagaimana cara membuatnya :
@@ -66,7 +88,7 @@ Ketika halaman ini tampil, aplikasi akan menampilkan data yang dikirim dari acti
 Berikut adalah tampilannya :
 
 <div align="center">
-![](https://raw.githubusercontent.com/herusantoso23/AndroidBeginnerIAK/master/app/src/main/res/drawable/cart.png)
+![](https://raw.githubusercontent.com/herusantoso23/source/master/cart.png)
 </div>
 
 Bagaimana cara membuatnya :
@@ -314,14 +336,141 @@ public class CartActivity extends AppCompatActivity {
     }
 ```
 
-##### 6. Membuat perhitungan sederhana
-Pada proses ini nantinya setiap menu memiliki harga, dan ketika checkbox menu di pilih, maka akan melakukan jumlah harga
+##### 6. Membuat perhitungan sederhana di AcTivity Cart
+Pada proses ini nantinya setiap menu memiliki harga, dan ketika checkbox menu di pilih, maka aplikasi akan melakukan hitung jumlah secara langsung.
+
+1). Pada package java, buka class CartActivity.java
+
+2). Pada class ini deklarasikan 2 buah CheckBox, 1 TextView dan 1 Button
+
+```java
+package com.aragon.herusantoso.iakday2;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.TextView;
+
+public class CartActivity extends AppCompatActivity {
+    TextView txtName;
+    TextView txtTotal;
+    CheckBox chSopBuah;
+    CheckBox chJus;
+
+    Button btnOrder;
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_cart);
+
+        txtName = (TextView) findViewById(R.id.txt_nama);
+        txtTotal = (TextView) findViewById(R.id.txt_total);
+        chSopBuah = (CheckBox) findViewById(R.id.ch_sop);
+        chJus = (CheckBox) findViewById(R.id.ch_jus);
+        btnOrder = (Button) findViewById(R.id.btn_order);
+
+        //variabel untuk menampung data yang diterima
+        String nama = getIntent().getStringExtra("name");
+
+        txtName.setText("Hai " + nama + ", Selamat berbelanja.");
+        
+    }
+}
+```
+
+3). Deklarasikan 3 buah variabel bertipe data integer. Misal variabel hargaJus yaitu harga untuk Jus, hargaSop yaitu harga untuk Sop Buah dan jumlah yaitu total harga dari pilihan menu.
+```java
+public class CartActivity extends AppCompatActivity {
+    TextView txtName;
+    TextView txtTotal;
+    CheckBox chSopBuah;
+    CheckBox chJus;
+
+    Button btnOrder;
+
+	//mendeklarasikan harga jus, sop buah dan total harga
+    int hargaJus = 10000, hargaSop = 12000, jumlah = 0;
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+    	//
+    }
+}
+
+```
+
+4). Berilah action pada chSopBuah (Check Box untuk sop buah). Ketika user melakukan  check list pada chSOpBuah maka nilai jumlah akan ditambah dengan harga sop buah sedangkan jika user melakukan un check list pada chSopBuah maka nilai jumlah akan dikurangi dengan harga sop buah
+
+```java
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_cart);
+
+        txtName = (TextView) findViewById(R.id.txt_nama);
+        txtTotal = (TextView) findViewById(R.id.txt_total);
+        chSopBuah = (CheckBox) findViewById(R.id.ch_sop);
+        chJus = (CheckBox) findViewById(R.id.ch_jus);
+        btnOrder = (Button) findViewById(R.id.btn_order);
+
+        //variabel untuk menampung data yang diterima
+        String nama = getIntent().getStringExtra("name");
+
+        txtName.setText("Hai " + nama + ", Selamat berbelanja.");
+
+		//Memberi action pada check box sop buah
+        chSopBuah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (chSopBuah.isChecked() == true){
+                    jumlah = jumlah + hargaSop;
+                    txtTotal.setText("Rp. " + jumlah);
+                } else if (chSopBuah.isChecked() == false) {
+                    jumlah = jumlah - hargaSop;
+                    txtTotal.setText("Rp. " + jumlah);
+                }
+            }
+        });
+    }
+
+```
+
+5). Berilah action pada chJus (Check Box untuk jus). Ketika user melakukan  check list pada chJus maka nilai jumlah akan ditambah dengan harga jus sedangkan jika user melakukan un check list pada chJus maka nilai jumlah akan dikurangi dengan harga jus
+
+```java
+		//Memberi action pada check box jus
+        chJus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (chJus.isChecked() == true){
+                    jumlah = jumlah + hargaJus;
+                    txtTotal.setText("Rp. " + jumlah);
+                } else if (chJus.isChecked() == false) {
+                    jumlah = jumlah - hargaJus;
+                    txtTotal.setText("Rp. " + jumlah);
+                }
+            }
+        });
+```
+
+6). Berilah action pada btnOrder (Button untuk order). Ketika button ini ditekan, maka akan muncul message berupa Toast, yang isinya akan memberi tahu tagihan dari total harga pesanan.
+
+```java
+ 		btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),
+                        "Jumlah tagihan " + jumlah + ", Terimakasih telah membeli",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+```
 
 
-
-
-
-
-
+<div align="center">
+	<h1>Selamat mencoba dan teruslah berlatih :-)</h1>
+</div>
 
 

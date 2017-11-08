@@ -34,6 +34,7 @@ public class CartActivity extends AppCompatActivity {
 
         txtName.setText("Hai " + nama + ", Selamat berbelanja.");
 
+        //Memberi action pada check box sop buah
         chSopBuah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,6 +48,7 @@ public class CartActivity extends AppCompatActivity {
             }
         });
 
+        //Memberi action pada check box jus
         chJus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
